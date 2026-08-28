@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "lora";
+    src: url(../Font/Lora-Regular.ttf);
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(../Font/Poppins-Regular.ttf);
+}
+
+:root {
+    --amarelo: #f7d93f;
+    --rosa: #fab3be;
+    --verde: #6c8c3c;
+    --verde-salvia: #728354;
+    --vinho: #8c5662;
+    --bege: #ccc3a2;
+}
+
+/* header */
+
+h1, h2, span{
+    font-family: "lora";
+}
+
+header{
+    width: 100%;
+    background-color: var(--bege);
+    position: sticky ;
+    top: 0;
+    padding-inline: 20px;
+}
+
+ .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px 0 10px ;
+    flex-wrap: wrap;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.logo>span:first-child{
+    font-size:1.5em;
+}
+.logo>span:last-child{
+    font-size: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--vinho);
+}
+
+ nav{
+    display: none;
+} 
+
+nav.menu-aberto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    gap: 10px;
+}
+
+.btn-whatsapp{
+    background-color: var(--verde);
+    color: var(--bege);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 70%;
+    margin: 10px auto 0;
+    padding: 13px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+/* propriedades do botão aqui */
+.menu-mobile{
+    padding: 7px;
+    width: 40px;
+    height: 40px;
+  
+    background-color: var(--vinho);
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* Main */
+main, footer{
+    padding-inline: 20px;
+}
+
+
+img{
+    border-radius: 20px;
+} 
+
+section#inicio > h2{
+    font-size: 24px;
+    font-family: 'lora';
+}
+
+section#inicio > h3, p{
+    font-family: 'poppins';
+    font-size: 18px;
+}
+

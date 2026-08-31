@@ -15,12 +15,16 @@
 }
 
 :root {
-    --amarelo: #f7d93f;
-    --rosa: #fab3be;
-    --verde: #6c8c3c;
-    --verde-salvia: #728354;
+    --branco: #f5ebdf;
+    --azul: #28334f;
+    --azul-bebe: #94a5d1;
+    --azul-claro: #b4bfbe;
     --vinho: #8c5662;
-    --bege: #ccc3a2;
+    --azul-piscina: #83cdcb;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /* header */
@@ -31,9 +35,10 @@ h1, h2, span{
 
 header{
     width: 100%;
-    background-color: var(--bege);
+    background-color: var(--azul-bebe);
     position: sticky ;
     top: 0;
+    z-index: 10;
     padding-inline: 20px;
 }
 
@@ -71,15 +76,17 @@ nav.menu-aberto{
     flex-wrap: wrap;
     flex-basis: 100%;
     gap: 10px;
+    
 }
 
 .container>nav>a{
     width: 40%;
+    
 }
 
 .btn-whatsapp{
-    background-color: var(--verde);
-    color: var(--bege);
+    background-color: var(--azul);
+    color: var(--azul-claro);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -110,6 +117,7 @@ nav.menu-aberto{
     color: aliceblue;
     border: none;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 
@@ -146,23 +154,62 @@ section#inicio > h3{
     text-align: center;
     margin-bottom: 15px;
 }
-/* 
-#diferenciais{
 
+#tratamentos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carde{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--azul);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px var(--azul-piscina);
+    transition: transform 0.2s ease; 
+} 
+
+.card:hover{
+    transform:scale(1.04);
+    cursor: pointer;
+}
+
+#diferenciais>h2{
+    text-align: center;
+    margin: 20px 20px auto;
+    margin-bottom: 20px;
 }
 
 #localizacao{
+    margin-top: 30px;
+    text-align: center;
+}
 
+.map{
+   display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #faq{
-
-} */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    
+} 
 
 #contato{
     display:block;
     align-items:center ;
-    background-color: var(--verde-salvia);
+    background-color: var(--vinho);
     text-align: center;
     width: 100%;
     padding: 10px;
@@ -186,3 +233,4 @@ div.link-social{
     padding: 5px 10px 5px 10px;
     border-radius: 40px;
 }
+

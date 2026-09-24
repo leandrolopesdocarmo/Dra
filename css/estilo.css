@@ -94,7 +94,7 @@ nav.menu-aberto{
 }
 
 .container>nav>a{
-    width: 40%;
+    width: 60%;
     
 }
 
@@ -109,7 +109,7 @@ nav.menu-aberto{
     justify-content: center;
     align-items: center;
     gap: 5px;
-    width:80%;
+    width:40%;
     margin: 20px auto ;
     padding: 13px;
     text-align: center;
@@ -122,7 +122,7 @@ nav.menu-aberto{
     var(--cor-primaria),
     var(--cor-destaque)
 );
-    color: var(--cor-texto);
+    color: var(--cor-texto-claro);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -185,6 +185,11 @@ section#inicio > h3{
     font-size: 1em;
 }
 
+.cuidados>h2{
+    text-align: center;
+
+}
+
 #tratamentos>h2,
 #tratamentos>article>h3{
     text-align: center;
@@ -192,8 +197,8 @@ section#inicio > h3{
 }
 
 #tratamentos{
-    display: flex;
-    flex-direction: column;
+    display:grid;
+    grid-template-columns: 1fr;
     gap: 10px;
 }
 .card-diferenciais{
@@ -205,12 +210,16 @@ section#inicio > h3{
     font-size: 2rem;
 }
 .carde{
-    display:flex;
-    flex-direction: column;
+    display:grid; 
+    grid-template-columns: 1fr;
     gap: 10px;
 }
 .card{
-    background-color: var(--cor-primaria);
+    background: linear-gradient(
+        to bottom,
+        var(--cor-primaria),
+        var(--cor-destaque)
+    );
     padding: 10px;
     text-align: center;
     border:2px solid var(--cor-borda);
@@ -241,15 +250,22 @@ section#inicio > h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 40px 40px auto;
     gap: 8px;
-    
+    margin: 40px 40px 40px 40px;
+    font-family: "poppins";
+    font-size: 1.3rem;
 } 
 
 #contato{
     color: var(--cor-texto-claro);
     display:block;
     align-items:center ;
-    background-color: var(--cor-primaria);
+    background: linear-gradient(
+        to bottom,
+        var(--cor-primaria),
+        var(--cor-destaque)
+    );
     box-shadow: 2px 2px 2px 2px var(--cor-fundo-secundario);
     text-align: center;
     width: 100%;
@@ -280,3 +296,149 @@ div.link-social{
     border-radius: 40px;
 }
 
+div.footer-container{
+    font-size: .7rem;
+    line-height: 1.1;
+    background: linear-gradient(
+        to bottom,
+        var(--cor-primaria),
+        var(--cor-destaque)
+    );
+    padding: 10px;
+    text-align: center;
+    border:2px solid var(--cor-borda);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px var(--cor-fundo-secundario);
+    transition: transform 0.2s ease; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer>p{
+    background-color:black;
+    font-family: "lora";
+    font-size: .7rem;
+    text-align: center;
+    color: var(--cor-texto-claro);
+    padding: 10px;
+    width: 100%;
+}
+
+/* ==================================
+       MEDIA(min-width:768px)
+===================================== */
+
+@media (min-width: 768px) {
+
+    .carde {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* APRESENTAÇÃO */
+
+    .apresentacao {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 50px;
+    }
+
+
+    /* SOBRE */
+
+    .sobre-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 50px;
+    }
+
+
+    /* IMAGENS */
+
+    .imagem-inicio img,
+    .imagem-sobre img {
+        width: 100%;
+        display: block;
+        margin-top: 50px;
+    }
+
+
+    .card-diferenciais {
+        text-align: center;
+    }
+
+}
+
+
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-coluna {
+        width: 30%;
+    }
+
+
+
+
+/* ==================================
+       media(min-width:1024px)
+===================================== */
+
+@media (min-width: 1024px) {
+
+    .carde {
+        grid-template-columns: repeat(4, 1fr);
+    }
+   
+    .carde {
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .cuidados {
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    #contato {
+        text-align: center;
+        padding: 30px 16px;
+        max-width: 500px;
+    }
+
+    #contato .btn-whatsapp {
+        max-width: 300px;
+    }
+   article{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+   }
+
+   #diferenciais .carde {
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    }
+
+    #faq {
+        width: 100%;
+        max-width: 800px;
+        margin: 40px auto;
+        text-align: center;
+        }
+    
+}

@@ -98,6 +98,24 @@ nav.menu-aberto{
     
 }
 
+.btn-menu{
+    background: linear-gradient(
+    to bottom,
+    var(--cor-primaria),
+    var(--cor-destaque)
+);
+    color: var(--cor-texto);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width:80%;
+    margin: 20px auto ;
+    padding: 13px;
+    text-align: center;
+    border-radius: 50px;
+}
+
 .btn-whatsapp{
     background: linear-gradient(
     to bottom,
@@ -228,9 +246,10 @@ section#inicio > h3{
 } 
 
 #contato{
+    color: var(--cor-texto-claro);
     display:block;
     align-items:center ;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-primaria);
     box-shadow: 2px 2px 2px 2px var(--cor-fundo-secundario);
     text-align: center;
     width: 100%;
@@ -251,6 +270,7 @@ div.link-social{
     display: flex;
     align-items: center;
     gap: 5px;
+    color: var(--cor-texto-claro);
     background: linear-gradient(
         to top,
         var(--cor-primaria),
